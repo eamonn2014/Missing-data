@@ -180,7 +180,7 @@ loglike2 <- function(x, dat, dead, indep , time) {
 ui <- dashboardPage(  title="Survival Analysis",
   # Dashboard header carrying the title of the dashboard,
   
-  dashboardHeader(title = h4(HTML("Parametric Survival & Cox Proportonal Hazards"))),
+  dashboardHeader(title = h4(HTML("Missing data"))),
   #Sidebar content of the dashboard
   sidebar <- dashboardSidebar(width=300,
                             
@@ -196,10 +196,10 @@ ui <- dashboardPage(  title="Survival Analysis",
                                 actionButton("resample"," Hit to sample another data set", icon = icon("th"),  width =250  ),
                                 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
                                 
-                                menuItem("Wiki", tabName = "Wiki",      icon = icon("bar-chart-o"), selected = FALSE),
+                                menuItem("xxxxxxxxxxxx", tabName = "Wiki",      icon = icon("bar-chart-o"), selected = FALSE),
                                 
                                 
-                                menuItem("Define parameters ", icon = icon("bar-chart-o"),
+                                menuItem("xxxxxxxxxxxx", icon = icon("bar-chart-o"),
                                          splitLayout(
                                            
                                            tags$div(
@@ -225,64 +225,64 @@ ui <- dashboardPage(  title="Survival Analysis",
                                 ),
                                 
                                 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-                                menuItem("Analyses",  startExpanded = FALSE,  icon = icon("bar-chart-o"),
+                                menuItem("xxxxxxxxxxxx",  startExpanded = FALSE,  icon = icon("bar-chart-o"),
                                          #~~~~~~~~~~~~~~~~~~~~~~~~
-                                         menuSubItem("Kaplan Meier (landing page)",    tabName = "OVERVIEW",  icon = icon("bar-chart-o"), selected = TRUE),
-                                         menuSubItem("KM diagnostics",                 tabName = "RESULTS2",  icon = icon("bar-chart-o")),
-                                         menuSubItem("Cox proportional hazards",       tabName = "RESULTS3",  icon = icon("bar-chart-o")),
-                                         menuSubItem("Cox PH Explanation",                    tabName = "HELP",      icon = icon("bar-chart-o"), selected = FALSE),
-                                         menuSubItem("Hazard ratio over time",         tabName = "RESULTS4",  icon = icon("bar-chart-o")),
-                                         menuSubItem("Partial log likelihood",         tabName = "RESULTS1",  icon = icon("table")),
+                                         menuSubItem("xxxxxxxxxxxxxxxxx (landing page)",     tabName = "OVERVIEW",  icon = icon("bar-chart-o"), selected = TRUE),
+                                         menuSubItem("xxxxxxxxxxxxxxxxx",                    tabName = "RESULTS2",  icon = icon("bar-chart-o")),
+                                         menuSubItem("xxxxxxxxxxxxxxxxx",                    tabName = "RESULTS3",  icon = icon("bar-chart-o")),
+                                         menuSubItem("xxxxxxxxxxxxxxxxx",                    tabName = "HELP",      icon = icon("bar-chart-o"), selected = FALSE),
+                                         menuSubItem("xxxxxxxxxxxxxxxxx",                    tabName = "RESULTS4",  icon = icon("bar-chart-o")),
+                                         menuSubItem("xxxxxxxxxxxxxxxxx",                    tabName = "RESULTS1",  icon = icon("table")),
                                          #~~~~~~~~~~~~~~~~~~~~~~~~
-                                         menuSubItem("Only ranks of event times needed!", tabName = "OVERVIEW2",  icon = icon("bar-chart-o"), selected = FALSE),
+                                         menuSubItem("xxxxxxxxxxxxxxxxx", tabName = "OVERVIEW2",  icon = icon("bar-chart-o"), selected = FALSE),
                                          #~~~~~~~~~~~~~~~~~~~~~~~~
-                                         menuSubItem("Model assumptions", tabName = "OVERVIEW3",  icon = icon("bar-chart-o"), selected = FALSE),
+                                         menuSubItem("xxxxxxxxxxxxxxxxx", tabName = "OVERVIEW3",  icon = icon("bar-chart-o"), selected = FALSE),
                                          #~~~~~~~~~~~~~~~~~~~~~~~~
-                                         menuSubItem("KM lifetable",                   tabName = "KMTABLE",  icon = icon("list-alt")),
+                                         menuSubItem("xxxxxxxxxxxxxxxxx",                   tabName = "KMTABLE",  icon = icon("list-alt")),
                                          #~~~~~~~~~~~~~~~~~~~~~~~~
-                                         menuItem("Partial likelihood exercise",  startExpanded = FALSE,    icon = icon("table"),
+                                         menuItem("xxxxxxxxxxxxxxxxx",  startExpanded = FALSE,    icon = icon("table"),
                                                  
                                                   tags$div(
-                                                    textInput(inputId="guess", label='Enter a guess at Hazard Ratio (defaulted to null)', width = '90%' , value="1"),
+                                                    textInput(inputId="xxxxxxxxxxxxxxxxx", label='xxxxxxxxxxxxxxxxx', width = '90%' , value="1"),
                                                   ),
                                                   
-                                                  menuSubItem("Hit to reveal Partial log likelihood",  tabName = "partial")
+                                                  menuSubItem("xxxxxxxxxxxxxxxxx",  tabName = "partial")
                                          )
                                          #~~~~~~~~~~~~~~~~~~~~~~~~
                                        
                                ),
                                 #
                                #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-                               menuItem("Change in hazard",  startExpanded = FALSE,    icon = icon("table")  ,
+                               menuItem("xxxxxxxxxxxxxxxxx",  startExpanded = FALSE,    icon = icon("table")  ,
                                         
                                         tags$div(
-                                          textInput(inputId="base", label='Enter a baseline hazard', width = '90%' , value="0.03"),
+                                          textInput(inputId="base", label='Enter xxxxxxxxxxxxxxxxx', width = '90%' , value="0.03"),
                                         ),
                                         tags$div(
-                                          textInput(inputId="cens", label='Enter a censoring hazard', width = '90%' , value="0.02"),
+                                          textInput(inputId="cens", label='Enter xxxxxxxxxxxxxxxxx', width = '90%' , value="0.02"),
                                         ),
                                         tags$div(
-                                          textInput(inputId="hr2", label='Enter a hazard ratio', width = '90%' , value="1.2"),
+                                          textInput(inputId="hr2", label='Enter xxxxxxxxxxxxxxxxx', width = '90%' , value="1.2"),
                                         ),
                                         tags$div(
-                                          textInput(inputId="per", label='Enter a survival probability',        width = '90%' , value="0.70"),
-                                          textInput(inputId="per2", label='Enter another survival probability', width = '90%' , value="0.50"),
+                                          textInput(inputId="per", label='Enter xxxxxxxxxxxxxxxxx',        width = '90%' , value="0.70"),
+                                          textInput(inputId="per2", label='Enter xxxxxxxxxxxxxxxxx', width = '90%' , value="0.50"),
                                         ),
                                         
-                                     menuSubItem("Hit to reveal a change in hazard",  tabName = "Change"),
-                                     menuSubItem("Hit to reveal hazard function estimate",  tabName = "Changeh")    ,
-                                     menuSubItem("Hit to reveal KM & smoothed survival curve",  tabName = "Changeh2") 
+                                     menuSubItem("Hit xxxxxxxxxxxxxxxxx",  tabName = "Change"),
+                                     menuSubItem("Hit xxxxxxxxxxxxxxxxx",  tabName = "Changeh")    ,
+                                     menuSubItem("Hit xxxxxxxxxxxxxxxxx",  tabName = "Changeh2") 
                             ),
                                
                             #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-                            menuItem("Power",  startExpanded = FALSE,    icon = icon("table")  ,
+                            menuItem("xxxxxxxxxxxx",  startExpanded = FALSE,    icon = icon("table")  ,
                                      
                                      splitLayout(
                                        tags$div(
-                                         textInput(inputId="ss", label='Enter two survival probs',   value="0.7, 0.5"),
+                                         textInput(inputId="ss", label='Enter xxxxxxxxxxxxxxxxx',   value="0.7, 0.5"),
                                        ),
                                        tags$div(
-                                         textInput(inputId="ss2", label='Enter two survival times',  value="11.9, 23.1"),
+                                         textInput(inputId="ss2", label='Enter xxxxxxxxxxxxxxxxx',  value="11.9, 23.1"),
                                        )
                                        
                                      ),
@@ -323,29 +323,29 @@ ui <- dashboardPage(  title="Survival Analysis",
                                     
                                      #~~~~~~~~~~~~~~~~~~~~~~~~~
                                      
-                                   menuSubItem("Hit to reveal power",  tabName = "power"),
-                                   menuSubItem("Hit to reveal Weibull distributions",  tabName = "weibull")
+                                   menuSubItem("Hit to xxxxxxxxxxxx",  tabName = "power"),
+                                   menuSubItem("Hit to xxxxxxxxxxxx",  tabName = "weibull")
                                   
                             ),
                             #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
                                
-                            menuItem("The Weibull Distributions",  startExpanded = FALSE,    icon = icon("table"),
+                            menuItem("xxxxxxxxxxxxxxxxx",  startExpanded = FALSE,    icon = icon("table"),
                                      
                                      tags$div(
-                                       textInput(inputId="shape", label='Weibull shape', width = '90%' , value="1"),
+                                       textInput(inputId="shape", label='xxxxxxxxxxxxxxxxx', width = '90%' , value="1"),
                                      ),
                                      
                                      tags$div(
-                                       textInput(inputId="scale", label='Weibull scale', width = '90%' , value="0.03"),
+                                       textInput(inputId="scale", label='xxxxxxxxxxxxxxxxx', width = '90%' , value="0.03"),
                                      ),
                                      
-                                     menuSubItem("Hit to reveal Survival hazard relationship",  tabName = "survhaz")
+                                     menuSubItem("Hit to xxxxxxxxxxxxxxxxx",  tabName = "survhaz")
                             ),
                                
                               # menuItem("Explanation",                    tabName = "HELP",icon = icon("bar-chart-o"), selected = FALSE),
                                # menuItem("Wiki", tabName = "Wiki",                          icon = icon("bar-chart-o"), selected = FALSE),
                                #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-                               menuItem("Code", icon = icon("bar-chart-o"),
+                               menuItem("xxxxxxxxxxxx", icon = icon("bar-chart-o"),
                                          menuSubItem("Shiny",  
                                                      icon = icon("send",lib='glyphicon'), 
                                                      href = "https://raw.githubusercontent.com/eamonn2014/PARTIAL-LIKELIHOOD-METHOD/master/app.R"),
@@ -357,32 +357,32 @@ ui <- dashboardPage(  title="Survival Analysis",
                                #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
                                          menuItem("References", icon = icon("bar-chart-o"),
                                          
-                                         menuSubItem(h5(HTML( "Regression Models and Life-Tables")),  
+                                         menuSubItem(h5(HTML( "xxxxxxxxxxxx")),  
                                                      icon = icon("send",lib='glyphicon'), 
                                                      href = "http://www.stat.cmu.edu/~ryantibs/journalclub/cox_1972.pdf"),
                                          
-                                         menuSubItem(h5(HTML( "Individual survival time prediction <br/>using statistical models")),
+                                         menuSubItem(h5(HTML( "xxxxxxxxxxxx")),
                                                      icon = icon("send",lib='glyphicon'), 
                                                      href = "https://jme.bmj.com/content/medethics/31/12/703.full.pdf") ,
                                          #dashboardHeader(title = h4(HTML("This title<br/>is just way too long")))
                                          
-                                         menuSubItem( h5(HTML("Can we say whether a drug would <br/>have enabled someone to <br/>live longer? Sadly not")),  
+                                         menuSubItem( h5(HTML("xxxxxxxxxxxx")),  
                                                       icon = icon("send",lib='glyphicon'), 
                                                       href = "https://understandinguncertainty.org/node/759"),
                                          
-                                         menuSubItem( h5(HTML("Analysis of time-to-event <br/>for observational studies <br/>Guidance to the use of intensity models")),  
+                                         menuSubItem( h5(HTML("xxxxxxxxxxxx")),  
                                                       icon = icon("send",lib='glyphicon'), 
                                                       href = "https://github.com/eamonn2014/PARTIAL-LIKELIHOOD-METHOD/blob/master/Analysis%20of%20time-to-event%20for%20observational%20studies.pdf"),
                                          
-                                         menuSubItem( h5(HTML("Cox's proportional hazards regression")),  
+                                         menuSubItem( h5(HTML("xxxxxxxxxxxx")),  
                                                       icon = icon("send",lib='glyphicon'), 
                                                       href = "https://influentialpoints.com/Training/coxs_proportional_hazards_regression_model-principles-properties-assumptions.htm"),
                                          
-                                         menuSubItem( h5(HTML("Frank Harrell cph function")),  
+                                         menuSubItem( h5(HTML("xxxxxxxxxxxx")),  
                                                       icon = icon("send",lib='glyphicon'), 
                                                       href = "https://rdrr.io/cran/rms/man/cph.html"),
                                          
-                                         menuSubItem( h5(HTML("Jonatahan Bartlett, Interpreting changes <br/> in hazard and hazard ratios")),  
+                                         menuSubItem( h5(HTML("xxxxxxxxxxxx")),  
                                                       icon = icon("send",lib='glyphicon'), 
                                                       href = "https://thestatsgeek.com/2014/03/28/interpreting-changes-in-hazard-and-hazard-ratios")
                                          
@@ -424,92 +424,62 @@ ui <- dashboardPage(  title="Survival Analysis",
 
       #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
       
-      tabItem("Wiki", 
+      tabItem("xxxxxxxxxxxx", 
               fluidRow(
                 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
                 box(  width=6,
-                  title='Wiki'
+                  title='xxxxxxxxxxxx'
                   ,status = "primary"
                   ,solidHeader = TRUE 
                   ,collapsible = TRUE 
               
-                 ,p("This app is an exploration of the semiparametric Cox PH model and parametric 
-                 Weibull and exponential models using a control arm and intervention arm only.")
+                 ,p("xxxxxxxxxxxxxxxxx.")
 
-                  ,p("
-              The first port of call is the 'Define parameters' chapter. Here select the total sample size, a constant baseline hazard rate, 
-              allocation to the control and intervention arm and a true hazard ratio for the intervention. These are used to simulate 
-              data via a user written function called 'coxdata'. Censoring is from a uniform distribution and assumed the same in both groups. ")
+                  ,p("xxxxxxxxxxxxxxxxx. ")
 
-              ,p("The three boxes at the top of the app (in red, blue and green) summarise the two treatment arms and the comparison. 
-                 There is also a green button at the top left of the app which permits a new simulation.")
+              ,p("xxxxxxxxxxxxxxxxx.")
 
-              ,p("Under 'Analyses' we find the landing page which shows the Kaplan Meier(KM) plot and the difference in the KM estimates with 95%CI
-                 using the simulated data.")
+              ,p("xxxxxxxxxxxxxxxxx.")
               
-              ,p("The next page 'KM Diagnostics' presents the cumulative incidence plot and two useful diagnostic plots.")
+              ,p("xxxxxxxxxxxxxxxxx.")
               
-              ,p("The 'Cox proportional hazards' page presents survival curves from Cox PH and then a diagnostic plot based on the Cox PH model.")
+              ,p("xxxxxxxxxxxxxxxxx.")
 
-              ,p("The 'Cox PH Explanation' goes into some detail on the calculations behind Cox PH.")
+              ,p("xxxxxxxxxxxxxxxxx.")
               
-              ,p("Two different plots of the log hazard ratio over time are then presented.")
+              ,p("xxxxxxxxxxxxxxxxx.")
               
-              ,p("The 'Partial log likelihood' page shows how the Cox PH works under the hood, which leads to the presentation on the next page 
-              exemplifying only the order of the events is required for HR estimation.")
+              ,p("xxxxxxxxxxxxxxxxx.")
               
-              ,p("The next page 'Model assumption' presents another way to check the Cox PH assumption.")
+              ,p("xxxxxxxxxxxxxxxxx.")
               
-              ,p("The next chapter is the Kaplan Meier life table and cumulative hazard table.")
+              ,p("xxxxxxxxxxxxxxxxx.")
               
-              ,p("Presented in the last page of this chapter is an exercise to help understand the Cox PH algorithm, 
-              by choosing a HR that maximises the Log Likelihood. On the right panel there is another simulated dataset 
-              of n=10 that helps once again to understand the calculations behind Cox PH.")
+              ,p("xxxxxxxxxxxxxxxxx.")
+              
         )
                 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
                 ,box(
-                  title='Wiki continued'
+                  title='xxxxxxxxxxxx'
                   ,status = "primary"
                   ,solidHeader = TRUE 
                   ,collapsible = TRUE 
 
-                  ,p("Next we move to the 'Change in hazard' chapter. From now on we can ignore the 3 value boxes at the top 
-                  of the app which are unrelated to the content of this chapter.
-Select the first page 'Hit to reveal a change in hazard'.
-Here we are presented with user inputs to permit simulation of a control and intervention. The control arm is modelled by a Weibull 
-distribution. On the right panel we use the Weibull density function in R with the shape equal to 
-1 (so exponential) and scale 1/Weibull and we plot this. 
-Then we calculate the effect on surival for the intervention based on the hr, raising the control
-survival to the hr power. Not only this, but based on the survival probabilities we calculate 
-the times and draw arrows on the curves using the simple relationship,
-lambda = -log(survival)/t. On the left panel is one simulated dataset, closely resembling the true distributions shown in the right panel. 
-We also present the HR estimates and a count of the number of events.")
+                  ,p("xxxxxxxxxxxxxxxxx.")
                   
-                  ,p("The next page presents a number of estimates of the hazard function. This leads us the to the smooth survival curve page,
-   estimated from the hazard function and which closes this chapter.")
                   
-                  ,p("Now onto the power chapter. Once again simulation is used, this time to assess power. 
-                  Here we can enter two survival probabilities 
-and associated survival times, a sample size for the control, the intervention, a hazard ratio, accrual time, follow up time, the number of simulations
-and a non compliance probability for the intervention arm. This uses Frank Harrell's functions. 
-The Weibull2 function takes two survival probabilities 
-and associated survival times and finds the Weibull distibution parameters. 
-We use this and the Quantile2 function to derive the Weibull distribution parameters for the intervention
-and survival times for the intervention and present them.
-The plot on the left shows the distributions and below it we see the results of simulations using the spower function.
-The right panel shows one simulated realisation and Cox PH analysis results. The next page 'Hit to reveal Weibull distributions' shows the Weibull survival distributions,
-survival probabiites and associated times plus the parameters of the Weibull distributions. The right plot is a repeat of the one simulated realisation seen on the previous page.
-     ")
+                  ,p("xxxxxxxxxxxxxxxxx.")
                   
-,p("Onto the next chapter 'The Weibull distribution' click 'Hit to reveal survival hazard relatonship' which 
-allows one to see the survival curve based on Weibull parameters and the associated hazard function 
-on the right plot. The hazard function is created with the p.d.f. divided by the survival function.
-     ")
+                  ,p("xxxxxxxxxxxxxxxxx.")
+                  
+                  
+                  ,p("xxxxxxxxxxxxxxxxx.")
+                  
 
-,p("Next one can find links to the Rshiny and R code. ")
-
-,p("The last selection provides some links to resources. More useful resources are linked to below:"),
-
+                  ,p("xxxxxxxxxxxxxxxxx.")
+                  
+                  ,p("xxxxxxxxxxxxxxxxx."),
+                  
  
 tags$a(href = "https://rviews.rstudio.com/2020/11/02/simulating-biologically-plausible-survival-data/", tags$span(style="color:blue", "Simulate survival data"),),
 div(p(" ")),
@@ -547,7 +517,7 @@ div(p(" "))
       tabItem("OVERVIEW",
               fluidRow(
                 box(
-                  title = "Kaplan-Meier Curve, interactive graphics, showing more by showing less"
+                  title = "xxxxxxxxxxxx"
                   ,status = "primary"
                   ,solidHeader = TRUE 
                   ,collapsible = TRUE 
@@ -558,14 +528,14 @@ div(p(" "))
                   h5(textOutput("Staff_name4")),
                   h5(textOutput("Staff_name5")),
                    
-                  tags$a(href = "https://www.youtube.com/watch?v=EoIB_Obddrk&t=327s&ab_channel=RMSRegression", tags$span(style="color:blue", "F harrell showing more by showing less, interactive and semi-interacive graphics"),),
+                  tags$a(href = "https://www.youtube.com/watch?v=EoIB_Obddrk&t=327s&ab_channel=RMSRegression", tags$span(style="color:blue", "xxxxxxxxxxxx"),),
                   div(p(" "))
 
                   
                 )
                 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
                 ,box(
-                  title='Difference in two Kaplan-Meier estimates with approximate confidence bands for differences'
+                  title='xxxxxxxxxxxx'
                   ,status = "primary"
                   ,solidHeader = TRUE 
                   ,collapsible = TRUE 
@@ -575,7 +545,7 @@ div(p(" "))
       tabItem("OVERVIEW2",
               fluidRow(
                 box(
-                  title =   "Kaplan-Meier curve"   # uiOutput('product'), 
+                  title =   "xxxxxxxxxxxx"   # uiOutput('product'), 
                   ,status = "primary"
                   ,solidHeader = TRUE 
                   ,collapsible = TRUE 
@@ -584,7 +554,7 @@ div(p(" "))
                 )
                 
                 ,box(
-                  title="KM, rank order of events preserved, sorted random values replace original numerical event times"
+                  title="xxxxxxxxxxxx"
                   ,status = "primary"
                   ,solidHeader = TRUE 
                   ,collapsible = TRUE 
@@ -596,7 +566,7 @@ div(p(" "))
    tabItem("OVERVIEW3",
            fluidRow(
              box(
-               title =   "Altschuler-Nelson-Fleming-Harrington non parametric survival estimates and Cox-Breslow estimates"     
+               title =   "xxxxxxxxxxxx"     
                ,status = "primary"
                ,solidHeader = TRUE 
                ,collapsible = TRUE 
@@ -609,9 +579,7 @@ div(p(" "))
                ,status = "primary"
                ,solidHeader = TRUE 
                ,collapsible = TRUE 
-               ,p("If the predicted survival curves from the fitted Cox model are in good agreement
-               with the nonparametric estimates, this is evidence of verifying the PH assumption
-for for these data")
+               ,p("xxxxxxxxxxxx")
  
              ))),   
       #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -620,10 +588,7 @@ for for these data")
              
                 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
                 box(width=8,
-                    title = "Partial Likelihood by hand! Here we show how to calculate the log likelihood given the actual model HR. 
-                In reality a starting HR is supplied and an iterative process used to search for the value that maximises the log partial likelihood function.
-               So the Beta obtained is the value that maximizes log PL. Note the estimate depends only on the
-                ranks of the event times, not their numerical values!"
+                    title = "xxxxxxxxxxxx"
                     ,status = "primary"
                     ,solidHeader = TRUE 
                     ,collapsible = TRUE 
@@ -636,7 +601,7 @@ for for these data")
                 box(
                   width=7,
                   # background = "green",
-                  title = "Can you enter a HR that maximises the Log Likelihood? Hint: try the model's estimate of the population HR"
+                  title = "xxxxxxxxxxxx"
                   ,status = "primary"
                   ,solidHeader = TRUE 
                   ,collapsible = TRUE 
@@ -645,35 +610,13 @@ for for these data")
                 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
                 ,box(
                   width=5,
-                  title='Small sample of N=10 exemplifying partial likelihood calculations'
+                  title='xxxxxxxxxxxx'
                   ,status = "primary"
                   ,solidHeader = TRUE 
                   ,collapsible = TRUE 
                   , DT::dataTableOutput("exercise2")
                   ,p("")
-                  ,p("
-                In this small dataset we can look at the calculations in detail.
-                Above time is sorted. The individual likelihood is overridden 
-                if a patient is censored. As we are not working on the log scale 
-                here the indivdual likelihoods column equals 1 (Log scale this would be 0).
-                
-                For a non censored patient the numerator is the (maximised) 
-                HR x treatment indicator and the denominator is the sum of the 
-                numerator columns for patients still in the risk set. 
-                For example for the first patient (who is not censored) we sum all numerator 10 values. 
-                The individual likelihoods are then Num./Den. Hence the censored individuals are included 
-                in the summation over the risk sets at event times that occur before a censored time.
-                 
-                Because we have not logged the data, multiply all individual likelihoods 
-                to give the log likelihood. This should be ok with 10 samples but will 
-                cause numerical problems with more patients, so it is advisable to do the 
-                calculations on the log scale.
-                 
-                Note the last person in the study always contributes 1 as they are the only person in their risk set. Therefore there is no 
-                effect on the HR estimate whether
-                they experience the event or are censored!
-                
-                Here we only log the final column.")
+                  ,p("xxxxxxxxxx.")
                 ))),        
           
       #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -681,7 +624,7 @@ for for these data")
               fluidRow(
                 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
                 box(  
-                  title='Proportional hazards model'
+                  title='xxxxxxxxxxxx'
                   ,status = "primary"
                   ,solidHeader = TRUE 
                   ,collapsible = TRUE ,
@@ -872,7 +815,7 @@ for for these data")
               fluidRow(
                 
                 box(width=6,
-                  title = "Plot estimated survival curve from Cox proportional hazards"
+                  title = "xxxxxxxxxxxx"
                   ,status = "primary"
                   ,solidHeader = TRUE 
                   ,collapsible = TRUE 
@@ -881,21 +824,13 @@ for for these data")
                 ),
                 
                 box(width=6,
-                  title = "Log-log survivor plot; log[-log S(t)] against
-                                log time based on Cox PH model"
+                  title = "xxxxxxxxxxxx"
                   ,status = "primary"
                   ,solidHeader = TRUE 
                   ,collapsible = TRUE 
                   ,plotOutput("plot3", height = "720px")
                   ,p("
-                  The function g(u) = log(-log(u)) is called the complementary log-log transformation, 
-                  and has the effect of changing the range from (0,1) for u 
-                  to (-$\\infty$ to $\\infty$) for g(u). A plot of g[$S_1$(t)] and g[$S_0$(t)] 
-                  versus t or log(t) will yield two parallel curves separated by $\\beta$ if the 
-                  proportional hazards assumption is correct.
-                  
-                  Since the survival functions are less than 1, their logarithms are negative.
-                  Thus, we must negate them before we take a second logarithm.
+                  xxxxxxxxxxxx
 
                   ")
                 )
@@ -907,16 +842,16 @@ for for these data")
            fluidRow(
            
              box(width=6,
-                  title='Repeated Cox regression coefficients estimates and confidence limits within time intervals'
+                  title='xxxxxxxxxxxx'
                   ,status = "primary"
                   ,solidHeader = TRUE 
                   ,collapsible = TRUE 
                   ,plotOutput("plot4", height = "720px")
-                 ,p("The log hazard ratios are plotted against the mean failure/censoring time within the interval")
+                 ,p("xxxxxxxxxxxx")
              )
              
              ,box(width=6,
-                  title='Plot of how the log HR is estimated to vary over time, based on the Schoenfeld residuals'
+                  title='xxxxxxxxxxxx'
                   ,status = "primary"
                   ,solidHeader = TRUE 
                   ,collapsible = TRUE 
@@ -927,36 +862,28 @@ for for these data")
            fluidRow(
              
              box(width=6,
-                 title='
-               Survival probability'
+                 title='xxxxxxxxxxxx'
                  ,status = "primary"
                  ,solidHeader = TRUE 
                  ,collapsible = TRUE 
                  ,plotOutput("survhaz", height = "720px")
-                 ,p("The exponential distribution, the simplest survival distribution, has a constant hazard. The
-exponential distribution is a special case of the Weibull distribution with shape =1. The shape of the hazard is monotone increasing
-for shape > 1 and monotone decreasing for shape < 1.
-                 The exponential distribution is easy to work with, but the constant hazard
-assumption is not often appropriate for describing human lifetimes. The Weibull distribution offers more flexibility in modeling survival
-data. Other
-parametric families of survival distributions include the gamma, log-normal, log-logistic, Pareto, and many more.")
+                 ,p("xxxxxxxxxxxx.")
              )
              
              ,box(width=6,
-                  title='Hazard function'
+                  title='xxxxxxxxxxxx'
                   ,status = "primary"
                   ,solidHeader = TRUE 
                   ,collapsible = TRUE 
                   ,plotOutput("survhaz2", height = "720px")
-                  ,p("To plot the hazard function with shape and scale, as shown by the left curve
-we define the hazard function as the p.d.f. divided by the survival function.")
+                  ,p("xxxxxxxxxxxx.")
              ))),
    #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
    tabItem("Change",
            fluidRow(
              
              box(width=6,
-                 title='KM curve based on user inputs, reference curve in blue'
+                 title='xxxxxxxxxxxx'
                  ,status = "primary"
                  ,solidHeader = TRUE 
                  ,collapsible = TRUE 
@@ -965,7 +892,7 @@ we define the hazard function as the p.d.f. divided by the survival function.")
              )
              
              ,box(width=6,
-                  title='Exponential curve based on user inputs, reference curve in blue'
+                  title='xxxxxxxxxxxx'
                   ,status = "primary"
                   ,solidHeader = TRUE 
                   ,collapsible = TRUE 
@@ -981,38 +908,22 @@ we define the hazard function as the p.d.f. divided by the survival function.")
            fluidRow(
              
              box(width=6,
-                 title='
-                Obtaining a step hazard function estimate'
+                 title='xxxxxxxxxxxx'
                  ,status = "primary"
                  ,solidHeader = TRUE 
                  ,collapsible = TRUE 
                  ,plotOutput("ploth", height = "720px")
-                 ,p("We use the library “muhaz” for estimating and plotting
-the nonparametric hazard functions. We use a constant smoothing parameter for all times.
+                 ,p("xxxxxxxxxxxx
 ")
               )
              
              ,box(width=6,
-                  title='Smoothed and step function estimates of the hazard function'
+                  title='xxxxxxxxxxxx'
                   ,status = "primary"
                   ,solidHeader = TRUE 
                   ,collapsible = TRUE 
                   ,plotOutput("ploth1", height = "720px")
-                  ,p("Above we illustrate estimation of obtaining a smoother hazard function for our data.
-First, we divide time into equal intervals of width 5 time units, and observe the
-number of events di and the number of patients at risk each interval, ni;
-the hazard estimate for that interval is hi = di/ni. The hazard estimate
-using this method is obtained using the R “pehaz” function. The resulting estimate 
-is the solid step function. In the same figure, we
-also present the step function for 1-time unit intervals. The one-time unit hazard
-function jumps around quite a bit from one interval to the next, which limits its
-utility in visualizing the hazard function. For best results for visualizing the hazard
-function, we compute a smooth hazard estimate.  
-Selection of the appropriate amount of smoothing is one of the most difficult
-problems in non-parametric hazard estimation. If the bandwidth parameter is too
-small, the estimate may gyrate widely. Chose a parameter too wide and the hazard
-function may be too smooth to observe real variations in the hazard function over
-time. Indeed the red line does capture the constant true hazard from which we simulate our data.")
+                  ,p("xxxxxxxxxxxx.")
                   
              
            ))),
@@ -1023,24 +934,12 @@ time. Indeed the red line does capture the constant true hazard from which we si
            fluidRow(
              
              box(width=12,
-                 title=' Kaplan-Meier and smoothed survival curve estimate'
+                 title='xxxxxxxxxxxx'
                  ,status = "primary"
                  ,solidHeader = TRUE 
                  ,collapsible = TRUE 
                  ,plotOutput("ploth2", height = "720px")
-                 , p(" One use of smoothing the hazard function, calculated on the previous page, 
-                 is to obtain a smooth estimate of the
-                  survival function, To get this estimate, we
-                  need to extract the hazard estimate and list of times at which the hazard is estimated
-                  We then compare our smoothed survival estimate to the Kaplan-Meier.
-                   The smoothed hazard function follows the survival curve fairly well.
-The smoothing procedure
-doesn’t produce estimates beyond the last failure time. While certain specialized
-applications may require a smooth survival curve estimate, most published studies
-of survival data prefer to report the Kaplan-Meier step function estimate. This
-estimate has the theoretical property of being the maximum likelihood estimate of
-the survival function. In addition, the step function plot is an effective visual display
-of the data, in that it shows when the failures and censoring times occurred.
+                 , p("xxxxxxxxxxxx
 ")
                  
              )
@@ -1063,24 +962,23 @@ of the data, in that it shows when the failures and censoring times occurred.
            fluidRow(
              
              box(width=6,
-                 title='Survival curves based on a Weibull distribution for use in a power simulation'
+                 title='xxxxxxxxxxxx'
                  ,status = "primary"
                  ,solidHeader = TRUE 
                  ,collapsible = TRUE 
                  ,plotOutput("powerp1", height = "720px")
-                 ,p("The solid curve is for the control group and the dashed curve is
-for the intervention group")
+                 ,p("xxxxxxxxxxxx")
                  ,h5(verbatimTextOutput("powerp2"))
              )
              
              ,box(width=6,
-                  title='Two-group event time comparison, one simulated realisation'
+                  title='xxxxxxxxxxxx'
                   ,status = "primary"
                   ,solidHeader = TRUE 
                   ,collapsible = TRUE 
                  
                    ,plotlyOutput("powerp3", height = "720px")
-                  ,p("Random uniform censoring times. It is assumed that both treatment groups have the same censoring distribution.")
+                  ,p("xxxxxxxxxxxx")
                   ,h5(verbatimTextOutput("powerp5"))
                   ,h5(verbatimTextOutput("powerp4"))
              ))),
@@ -1092,7 +990,7 @@ for the intervention group")
            fluidRow(
              
              box(width=6,
-                 title='Weibull distributions of control and intervention arm'
+                 title='xxxxxxxxxxxx'
                  ,status = "primary"
                  ,solidHeader = TRUE 
                  ,collapsible = TRUE 
@@ -1101,7 +999,7 @@ for the intervention group")
              )
              
              ,box(width=6,
-                  title='Reprise of two-group event time comparison, one simulated realisation'
+                  title='xxxxxxxxxxxx'
                   ,status = "primary"
                   ,solidHeader = TRUE 
                   ,collapsible = TRUE 
@@ -1115,7 +1013,7 @@ for the intervention group")
              box(
                width=6,
                # background = "green",
-               title = "KM survival table"
+               title = "xxxxxxxxxxxx"
                ,status = "primary"
                ,solidHeader = TRUE 
                ,collapsible = TRUE 
@@ -1124,88 +1022,45 @@ for the intervention group")
              #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
              ,box(
                width=6,
-               title='Cumulative hazard'
+               title='xxxxxxxxxxxx'
                ,status = "primary"
                ,solidHeader = TRUE 
                ,collapsible = TRUE 
               , DT::dataTableOutput("CHAZ")
                ,p("")
-               ,p("Cumulative hazard is shown in the column 'surv' and can be calculated thus: -log(Survival) ")
+               ,p("xxxxxxxxxxxx")
              ))),        
    
    #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
    tabItem("RESULTS2",
            fluidRow(
              box(width=4,
-               title = "Cumulative proportion" 
+               title = "xxxxxxxxxxxx" 
                ,status = "primary"
                ,solidHeader = TRUE 
                ,collapsible = TRUE 
                ,plotlyOutput("plot99a", height = "720px")
-               ,p("This presentation is the the KM plot but with 1-survival probabilty on the y axis.")
+               ,p("xxxxxxxxxxxx")
              )
              
              ,box(width=4,
-               title="Cumulative Hazard" 
+               title="xxxxxxxxxxxx" 
                ,status = "primary"
                ,solidHeader = TRUE
                ,collapsible = TRUE
                ,plotlyOutput("plot99b", height = "720px")
               
                ,h5(textOutput("info3"))
-               ,p("It is advisable to carry out the above graphical procedure before fitting a Cox regression model. 
-               The interpretation of cumulative hazards $H(t)$ can be tricky, one way to think of cumulative hazards is the number of events  
-               exepected by time $t$ if the event were a repeatable process.
-               The Stata manual's interpretation of cumulative hazards has more: 'The cumulative hazard function, $H(t)$, has much more to offer than merely an
-                  intermediate calculation to derive a 
-survivor function from a hazard function. Hazards are rates, and in that respect they are not unlike the 
-RPM-revolutions per minute-of an automobile engine. 
-Cumulative hazards are the integral from zero to t of the hazard rates. 
-Because an integral is really just a sum, a cumulative hazard is like the total number of revolutions
-an automobile's engine makes over a given period. 
-We could form the cumulative revolution function by integrating RPM over time. 
-If we let a car engine run at a constant 2,000 RPM for 2 minutes, then the cumulative revolution function at time 2
-minutes would be 4,000, meaning the engine would have revolved 4,000 times over that
-period. Similarly, if a person faced a constant hazard rate of 2,000/minute (a big risk)
-for 2 minutes, she would face a total hazard of 4,000. Going back to the car engine, if
-we raced the engine at 3,000 RPM for 1 minute and then let it idle at 1,000 for another,
-the total number of revolutions would still be 4,000. If our fictional risk taker faced a
-hazard of 3,000/minute for 1 minute and then a hazard of 1,000/minute for another,
-the total risk would still be 4,000.
-Now let's stick with our fictional friend. Whatever the profile of risk, 
-if the cumulative hazard is the same over a 2-minute period, then the probability of the event
-(presumably death) occurring during that 2-minute period is the same.
-Let's understand the units of this measurement of risk. In this, cumulative hazards
-are more easily understood than the hazard rates themselves. Remember that 
-$S(t) = \\exp( -H(t))$, so our fictional friend has a probability of surviving the 2-minute interval
-of $\\exp(-4000) = 0$: our friend is going to die. One may similarly calculate the probability
-of survival given other values for the cumulative hazard.
-Probabilities, however, are not the best way to think about cumulative hazards.
-Another interpretation of the cumulative hazard is that it records the number of times
-we would expect (mathematically) to observe failures over a given period, if only the
-failure event were repeatable. With our fictional friend, the cumulative hazard of 4,000
-over the 2-minute period means that we would expect him to die 4,000 times if, as in
-a video game, each time he died we could instantly resurrect him and let him continue
-on his risky path.'")
+               ,p("xxxxxxxxxxxx")
                ) 
              
              ,box(width=4,
-               title="Complementary log−log" 
+               title="xxxxxxxxxxxx" 
                ,status = "primary"
                ,solidHeader = TRUE
                ,collapsible = TRUE
                ,plotlyOutput("plot99c", height = "720px")  
-               ,p("
-                  The function g(u) = log(-log(u)) is called the complementary log-log transformation, 
-                  and has the effect of changing the range from (0,1) for u 
-                  to (-$\\infty$ to $\\infty$) for g(u). A plot of g[$S_1$(t)] and g[$S_0$(t)] 
-                  versus t or log(t) will yield two parallel curves separated by $\\beta$ if the 
-                  proportional hazards assumption is correct.
-                  
-                  Since the survival functions are less than 1, their logarithms are negative.
-                  Thus, we must negate them before we take a second logarithm.
-
-                  ")
+               ,p("xxxxxxxxxxxx")
                 ) 
              
              
@@ -1229,7 +1084,7 @@ server <- function(input, output) {
     valueBox(
       value =  tags$p(paste0(formatz0(setUpByName())," / ",formatz0(setUpByNamea()) ," / ",formatz00(setUpByNameb()) ," / ",formatz1(setUpByNamec()) ," / ",formatz2(setUpByNamea()/setUpByNameb()  )    )
                       ,style = "font-size: 100%;")
-      ,subtitle = tags$p('N; Events (a); Exposure (b); Median surv.; Hazard (a/b)', style = "font-size: 150%;")
+      ,subtitle = tags$p('xxxxxxxxxxxx', style = "font-size: 150%;")
       ,icon = icon("stats",lib='glyphicon')
       ,color = "red" )
     
@@ -1240,7 +1095,7 @@ server <- function(input, output) {
     valueBox(
       value =  tags$p(paste0(formatz0(setUpByName2())," / ",formatz0(setUpByName2a()) ," / ",formatz00(setUpByName2b()) ," / ",formatz1(setUpByName2c()) ," / ",formatz2(setUpByName2a()/setUpByName2b()  )    )
                       ,style = "font-size: 100%;")
-      ,subtitle = tags$p('N; Events (a); Exposure (b); Median surv.; Hazard (a/b)', style = "font-size: 150%;")
+      ,subtitle = tags$p('xxxxxxxxxxxx', style = "font-size: 150%;")
       ,icon = icon("stats",lib='glyphicon')
       ,color = "teal")
     
@@ -1251,7 +1106,7 @@ server <- function(input, output) {
     valueBox(
       value =  tags$p(paste0(formatz2(setUpByName4())," ( ",formatz2(setUpByName5()),", ",formatz2(setUpByName6())," ) " ," ; ",formatz1(setUpByNameLL()))
                       ,style = "font-size: 100%;")
-      ,subtitle = tags$p(paste0("Hazard ratio trt 1 v 0 with 95% conf. ; log likelihood"), style = "font-size: 150%;")
+      ,subtitle = tags$p(paste0("xxxxxxxxxxxx"), style = "font-size: 150%;")
       ,icon = icon("education",lib='glyphicon')
       ,color = "green")
     
@@ -2054,16 +1909,12 @@ server <- function(input, output) {
                     ifelse(beta1 > 1, "will increase ","will not change")) 
      
     c(paste0(" 
-    With a shape parameter of 1 and a scale parameter of ",lambdaT," a survival curve is created based on a Weibull distribution.
-    When the shape parameter equals 1 the Weibull reduces to an exponential distribution. Let's assume time is measured in months.
-    The time to reach median survival is equal to -log(0.5) / ",formatz2(lambdaT),". 
-             This equates to a median survival of ", formatz2(-log(.5)*1/lambdaT)," months. 
+    xxxxxxxxxxxx ",lambdaT," xxxxxxxxxxxx",formatz2(lambdaT),". 
+             xxxxxxxxxxxx ", formatz2(-log(.5)*1/lambdaT)," xxxxxxxxxxxx 
              
-             Replacing 0.5 with a desired survival percentile will return the associated time. 
-             Enter survival probabilities in the two boxes on the left. 
-             
-             The time at which the survival probability is ",per* 100,"% is ",  formatz2(-log(per)* 1/lambdaT), " months.
-             The time at which the survival probability is ",per2*100,"% is ",  formatz2(-log(per2)*1/lambdaT), " months"
+             xxxxxxxxxxxx
+             xxxxxxxxxxxx ",per* 100,"% is ",  formatz2(-log(per)* 1/lambdaT), " xxxxxxxxxxxx
+             xxxxxxxxxxxx ",per2*100,"% is ",  formatz2(-log(per2)*1/lambdaT), " xxxxxxxxxxxx"
       ))
                
      
@@ -2090,11 +1941,10 @@ server <- function(input, output) {
                     ifelse(beta1 > 1, "will increase ","will not change")) 
      
     
-    c(paste0("Now if we are postulating that a new treatment " ,wordd," the hazard by ",yo,"% we can use 
-               the fact S1(t) = S0(t)^exp Bx, with exp Bx=", (beta1)," the 
-              probability of survival at ",  formatz2(-log(per)*  1/lambdaT), " months now becomes ",formatz2((per)^(beta1)) ,".
-          The probability of survival at ",  formatz2(-log(per2)* 1/lambdaT), " months now becomes ",formatz2((per2)^(beta1)) ,"
-          . See the arrows in the plot showing the changes in survival. 
+    c(paste0("xxxxxxxxxxxx " ,wordd," xxxxxxxxxxxx ",yo,"xxxxxxxxxxxx 
+              xxxxxxxxxxxx", (beta1),"xxxxxxxxxxxx",  formatz2(-log(per)*  1/lambdaT), "xxxxxxxxxxxx ",formatz2((per)^(beta1)) ,".
+          xxxxxxxxxxxx",  formatz2(-log(per2)* 1/lambdaT), " xxxxxxxxxxxx ",formatz2((per2)^(beta1)) ,"
+          . xxxxxxxxxxxx. 
              " ) )
     
     })
@@ -2669,60 +2519,31 @@ server <- function(input, output) {
     
     wordup2 <- ifelse(X>1,"increase", "reduction")
     
-    paste0( "From the Cox model the estimated hazard ratio is "
+    paste0( "xxxxxxxxxxxx "
             , formatz2(X),", 95%CI ( ",formatz2(Y),", ",formatz2(Z),
             " ) comparing treatment 1 to 0. 
             
-             A hazard ratio of  ", formatz2(X)," means that, in each unit of time, someone 
-            treated in group 1 has ", formatz00(abs(X/1-1)*100),"% ", wordup ," of the chance of experiencing the event of interest
-            in the following unit of time as they would were they taking treatment 0.
+             xxxxxxxxxxxx ", formatz2(X),"xxxxxxxxxxxx ", formatz00(abs(X/1-1)*100),"% ", wordup ," xxxxxxxxxxxx.
             
-            There is an estimated ", formatz00(abs(X/1-1)*100),"% ", wordup2 ," in the hazard of the outcome by the Cox model. 
+           xxxxxxxxxxxx ", formatz00(abs(X/1-1)*100),"% ", wordup2 ," xxxxxxxxxxxx. 
             
-            Equivalently, the hazard ratio is equal to the odds that a patient in treatment group 1 experiences the event of interest before a
-            a patient in treatment group 0.
+            xxxxxxxxxxxx.
             
-           Therefore we can reformulate the hazard ratio, possibly more intuitively, as
-            the probability that a patient in treatment 
-            group 1 experiences the event before a patient in treatment group 0, which is: "
+           xxxxxxxxxxxx: "
                   , formatz2(Xp),", 95%CI ( ",formatz2(Yp),", ",formatz2(Zp),").   ")   
             
   })
   
     output$Staff_name3<- renderText({  
-    paste0( "This above presentation uses Frank Harrell's RMS package'For statistical graphics to have 
-    high information it's often better to 
-            use newer options in interactive and semi
-interactive graphics to show initially what we want to focus on and allow drilling down for more information. 
-Franks's RMS package in R has implemented several functions that allow use of
-plotly graphics and allow for hovering over points and revealing more information 
-as well as selectively displaying different traces
-on the graph. Here we're using a nonparametric survival function making special calculations
-of cumulative incidents at time points 5 and 10 using a simple exponential distribution fit, so
-they may not be exactly good estimates if the distribution is not from exponential. We also see
-how many total events there are in the two strata.")
+    paste0( "xxxxxxxxxxxx.")
     })
       
     output$Staff_name4<- renderText({  
-      paste0( "We also see can present a more useful confidence band. 
-      Most non statisticians don't realize that you
-cannot look at the overlap of individual confidence bands to judge significance of the difference, you have to
-actually calculate the confidence interval for the difference. The band height is half of the height of the 
-point-wise 0.95 confidence intervals and it's positioned at the midpoint of the
-two KM estimates, so this has the property that the shaded band overlaps the two curves at a point if and only if the p-value for the
-comparison at those two points is greater than 0.05, so this confidence band which is the half-height confidence band is
-giving us what we really need and is far less cluttered.")
+      paste0( "xxxxxxxxxxxx.")
     })
     
     output$Staff_name5<- renderText({  
-      paste0( "When you hover over points on a plotly graphic you can see the actual estimates and the number of subjects at risk. 
-      If you think about the number at risk that is really a continuous variable because
-time is almost always continuous in survival analysis. We've been calculating the number at risk on a
-monthly or yearly basis for most of our statistical lives and that's really committing a sin which is chopping nice
-continuous data. The reviewer of the graph may want to know the number at risk at a certain point that you didn't
-happen to choose when making the graph. So now we have all the numbers at risk that we could ever want by just hovering over
-the point and revealing the number at risk exactly at that time point, also at the same time reveal the KM survival 
-              probability estimate.'") 
+      paste0( "xxxxxxxxxxxx") 
       
     })
  
@@ -2776,21 +2597,13 @@ the point and revealing the number at risk exactly at that time point, also at t
   
   output$info <- renderText({  
     
-    c("Because the model
-      depends only on ranks, any transformation of the event
-      times that preserves the order will leave the coefficient
-      estimates unchanged as seen above.")
+    c("xxxxxxxxxxxx.")
     
   })
   
   output$info2 <- renderText({  
     
-    c("The regression coefficients of the proportional hazards 
-      model are estimated without having to specify the 
-      baseline hazard function (distribution-free approach), 
-      and the estimates depend only on the
-      ranks of the event times, not their numerical values. 
-      The HR quoted in the top right value box is unchanged in the right panel!")
+    c("xxxxxxxxxxxx")
     
   })
   
@@ -2801,10 +2614,9 @@ the point and revealing the number at risk exactly at that time point, also at t
     hr=        sample$hr
     baseline=  sample$baseline
     
-    c(paste0("For treatment group 0 we add a red dotted line, 
-             the slope of which equals the true baseline cumulative hazard ",baseline
-             ," and a blue dotted line, the slope of which equals the true
-             cumulative hazard in treatment group 1...the slope being the true baseline x true hr ", 
+    c(paste0("xxxxxxxxxxxx ",baseline
+             ," xxxxxxxxxxxx
+             xxxxxxxxxxxx ", 
              baseline*hr,""))
   
   })
