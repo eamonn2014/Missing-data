@@ -1079,15 +1079,16 @@ server <- function(input, output) {
   })
   #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
   # https://stackoverflow.com/questions/55043092/r-shinydashboard-display-sum-of-selected-input-in-a-valuebox
+  # J.bartlett lesson Classifying missing data mechanisms
   output$value1 <- renderValueBox({
     
     valueBox(
       # value =  tags$p(paste0(formatz0(setUpByName())," / ",formatz0(setUpByNamea()) ," / ",formatz00(setUpByNameb()) ," / ",formatz1(setUpByNamec()) ," / ",formatz2(setUpByNamea()/setUpByNameb()  )    )
       #                 ,style = "font-size: 100%;")
       value=""
-      ,subtitle = tags$p('ALQ100 is missing completely at random (MCAR) if the probability
-of ALQ100 being missing is independent of gender and the (possibly
-missing) yes/no answer of ALQ100.', style = "font-size: 150%;")
+      ,subtitle = tags$p('Variable X is missing completely at random (MCAR) if the probability
+of Variable X being missing is independent of patient sex and the (possibly
+missing) yes/no value of Variable X.                         ', style = "font-size: 150%;")
       ,icon = icon("stats",lib='glyphicon')
       ,color = "green" )
     
@@ -1099,9 +1100,9 @@ missing) yes/no answer of ALQ100.', style = "font-size: 150%;")
       # value =  tags$p(paste0(formatz0(setUpByName2())," / ",formatz0(setUpByName2a()) ," / ",formatz00(setUpByName2b()) ," / ",formatz1(setUpByName2c()) ," / ",formatz2(setUpByName2a()/setUpByName2b()  )    )
       #                 ,style = "font-size: 100%;")
       value=""
-      ,subtitle = tags$p('ALQ100 is missing at random (MAR) given gender if the probability of
+      ,subtitle = tags$p('Variable X is missing at random (MAR) given patient sex if the probability of
 missingness is independent of the (possibly missing) yes/no value of
-ALQ100, after adjusting for (conditional on) gender', style = "font-size: 150%;")
+Variable X, after adjusting for (conditional on) patient sex', style = "font-size: 150%;")
       ,icon = icon("stats",lib='glyphicon')
       ,color = "teal")
     
@@ -1115,8 +1116,8 @@ ALQ100, after adjusting for (conditional on) gender', style = "font-size: 150%;"
     #  ,#
       value=""
       ,subtitle = tags$p(paste0("Missing not at random (MNAR) means the probability of missingness still
-depends on the (possibly missing) yes/no value of ALQ100, even
-after adjusting for gender."), style = "font-size: 150%;")
+depends on the (possibly missing) yes/no value of Variable X, even
+after adjusting for patient sex."), style = "font-size: 150%;")
       ,icon = icon("education",lib='glyphicon')
       ,color = "red")
     
