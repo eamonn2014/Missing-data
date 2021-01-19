@@ -177,7 +177,7 @@ loglike2 <- function(x, dat, dead, indep , time) {
 # Start app
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-ui <- dashboardPage(  title="Survival Analysis",
+ui <- dashboardPage(  title="Missing data",
   # Dashboard header carrying the title of the dashboard,
   
   dashboardHeader(title = h4(HTML("Missing data"))),
@@ -1082,20 +1082,26 @@ server <- function(input, output) {
   output$value1 <- renderValueBox({
     
     valueBox(
-      value =  tags$p(paste0(formatz0(setUpByName())," / ",formatz0(setUpByNamea()) ," / ",formatz00(setUpByNameb()) ," / ",formatz1(setUpByNamec()) ," / ",formatz2(setUpByNamea()/setUpByNameb()  )    )
-                      ,style = "font-size: 100%;")
-      ,subtitle = tags$p('xxxxxxxxxxxx', style = "font-size: 150%;")
+      # value =  tags$p(paste0(formatz0(setUpByName())," / ",formatz0(setUpByNamea()) ," / ",formatz00(setUpByNameb()) ," / ",formatz1(setUpByNamec()) ," / ",formatz2(setUpByNamea()/setUpByNameb()  )    )
+      #                 ,style = "font-size: 100%;")
+      value=""
+      ,subtitle = tags$p('ALQ100 is missing completely at random (MCAR) if the probability
+of ALQ100 being missing is independent of gender and the (possibly
+missing) yes/no answer of ALQ100.', style = "font-size: 150%;")
       ,icon = icon("stats",lib='glyphicon')
-      ,color = "red" )
+      ,color = "green" )
     
   })
   
   output$value2 <- renderValueBox({
     
     valueBox(
-      value =  tags$p(paste0(formatz0(setUpByName2())," / ",formatz0(setUpByName2a()) ," / ",formatz00(setUpByName2b()) ," / ",formatz1(setUpByName2c()) ," / ",formatz2(setUpByName2a()/setUpByName2b()  )    )
-                      ,style = "font-size: 100%;")
-      ,subtitle = tags$p('xxxxxxxxxxxx', style = "font-size: 150%;")
+      # value =  tags$p(paste0(formatz0(setUpByName2())," / ",formatz0(setUpByName2a()) ," / ",formatz00(setUpByName2b()) ," / ",formatz1(setUpByName2c()) ," / ",formatz2(setUpByName2a()/setUpByName2b()  )    )
+      #                 ,style = "font-size: 100%;")
+      value=""
+      ,subtitle = tags$p('ALQ100 is missing at random (MAR) given gender if the probability of
+missingness is independent of the (possibly missing) yes/no value of
+ALQ100, after adjusting for (conditional on) gender', style = "font-size: 150%;")
       ,icon = icon("stats",lib='glyphicon')
       ,color = "teal")
     
@@ -1104,11 +1110,15 @@ server <- function(input, output) {
   output$value3 <- renderValueBox({
     
     valueBox(
-      value =  tags$p(paste0(formatz2(setUpByName4())," ( ",formatz2(setUpByName5()),", ",formatz2(setUpByName6())," ) " ," ; ",formatz1(setUpByNameLL()))
-                      ,style = "font-size: 100%;")
-      ,subtitle = tags$p(paste0("xxxxxxxxxxxx"), style = "font-size: 150%;")
+    #  value =  tags$p(paste0(formatz2(setUpByName4())," ( ",formatz2(setUpByName5()),", ",formatz2(setUpByName6())," ) " ," ; ",formatz1(setUpByNameLL()))
+     #                 ,style = "font-size: 100%;")
+    #  ,#
+      value=""
+      ,subtitle = tags$p(paste0("Missing not at random (MNAR) means the probability of missingness still
+depends on the (possibly missing) yes/no value of ALQ100, even
+after adjusting for gender."), style = "font-size: 150%;")
       ,icon = icon("education",lib='glyphicon')
-      ,color = "green")
+      ,color = "red")
     
   }) 
   
