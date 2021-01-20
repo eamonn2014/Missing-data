@@ -1087,8 +1087,8 @@ server <- function(input, output) {
       #                 ,style = "font-size: 100%;")
       value=""
       ,subtitle = tags$p('Variable X is missing completely at random (MCAR) if the probability
-of Variable X being missing is independent of patient sex and the (possibly
-missing) yes/no value of Variable X.                         ', style = "font-size: 150%;")
+of Variable X being missing is statistically independent of patient sex and the (possibly
+missing) yes/no value of Variable X. Does this seem plausible?', style = "font-size: 150%;")
       ,icon = icon("stats",lib='glyphicon')
       ,color = "green" )
     
@@ -1101,8 +1101,8 @@ missing) yes/no value of Variable X.                         ', style = "font-si
       #                 ,style = "font-size: 100%;")
       value=""
       ,subtitle = tags$p('Variable X is missing at random (MAR) given patient sex if the probability of
-missingness is independent of the (possibly missing) yes/no value of
-Variable X, after adjusting for (conditional on) patient sex', style = "font-size: 150%;")
+missingness is statistically independent of the (possibly missing) yes/no value of
+Variable X, after adjusting for (or conditional on) patient sex', style = "font-size: 150%;")
       ,icon = icon("stats",lib='glyphicon')
       ,color = "teal")
     
@@ -1117,7 +1117,9 @@ Variable X, after adjusting for (conditional on) patient sex', style = "font-siz
       value=""
       ,subtitle = tags$p(paste0("Missing not at random (MNAR) means the probability of missingness still
 depends on the (possibly missing) yes/no value of Variable X, even
-after adjusting for patient sex."), style = "font-size: 150%;")
+after adjusting for patient sex. A number of methods are valid under MCAR
+or MAR, but not MNAR. So ideally we would like to rule out
+MNAR."), style = "font-size: 150%;")
       ,icon = icon("education",lib='glyphicon')
       ,color = "red")
     
